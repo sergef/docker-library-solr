@@ -1,4 +1,4 @@
-FROM anapsix/alpine-java:jre8
+FROM %DOCKER_REGISTRY%docker-library-jre8
 
 # Thanks to:
 # Anastas Dancha <anapsix@random.io>
