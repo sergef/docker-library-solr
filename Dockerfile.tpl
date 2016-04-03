@@ -12,7 +12,8 @@ ENV SOLR_PACKAGE $SOLR.tgz
 
 EXPOSE 8983
 
-RUN apk --update add bash
+RUN apk update \
+  && apk add bash
 
 ADD $SOLR_MIRROR/$SOLR_VERSION/$SOLR_PACKAGE /opt
 # Keeping SOLR package locally for offline/more predictable builds
@@ -23,5 +24,4 @@ RUN gzip -dc /opt/$SOLR_PACKAGE | tar -C /opt -x \
   && rm -rf /tmp/* /opt/$SOLR_PACKAGE
 
 WORKDIR /opt/solr
-
 CMD bin/solr start -f
