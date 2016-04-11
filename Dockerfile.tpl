@@ -6,7 +6,7 @@ FROM %DOCKER_REGISTRY%docker-library-jre8
 MAINTAINER Serge Fomin <serge.fo@gmail.com>
 
 ENV SOLR_MIRROR http://mirrors.ocf.berkeley.edu/apache/lucene/solr
-ENV SOLR_VERSION 5.5.0
+ENV SOLR_VERSION 6.0.0
 ENV SOLR solr-$SOLR_VERSION
 ENV SOLR_PACKAGE $SOLR.tgz
 
